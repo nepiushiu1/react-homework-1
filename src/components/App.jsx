@@ -3,10 +3,11 @@ import { Statics } from './Statics/Statics';
 
 import user from 'user.json';
 // import data from 'data.json';
+import css from './App.module.css';
 
 export const App = () => {
   return (
-    <div>
+    <div className={css.conteiner}>
       <Profile
         username={user.username}
         tag={user.tag}
