@@ -28,6 +28,7 @@ export const Profile = ({ avatar, username, tag, location, stats }) => {
     </div>
   );
 };
+
 Profile.propTypes = {
   avatar: PropTypes.string.isRequired,
   username: PropTypes.string.isRequired,

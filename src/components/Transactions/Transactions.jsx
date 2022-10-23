@@ -1,5 +1,6 @@
 import { TransactionItem } from './TransactionItem/TransactionItem';
 import css from './Transactions.module.css';
+import PropTypes from 'prop-types';
 
 export const Transactions = ({ transactions }) => {
   return (
@@ -24,4 +25,12 @@ export const Transactions = ({ transactions }) => {
       </tbody>
     </table>
   );
+};
+Transactions.propTypes = {
+  transactions: PropTypes.arrayOf({
+    id: PropTypes.string.isRequired,
+    type: PropTypes.string.isRequired,
+    amount: PropTypes.number.isRequired,
+    currency: PropTypes.string.isRequired,
+  }),
 };

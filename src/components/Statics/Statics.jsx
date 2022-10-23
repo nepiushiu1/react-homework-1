@@ -1,5 +1,6 @@
 import css from './Statics.module.css';
 import { StaticsItem } from './StaticsItem/StaticsItem';
+import PropTypes from 'prop-types';
 
 export const Statics = ({ title, stats }) => {
   return (
@@ -13,4 +14,13 @@ export const Statics = ({ title, stats }) => {
       </ul>
     </section>
   );
+};
+
+Statics.propTypes = {
+  title: PropTypes.string,
+  stats: PropTypes.arrayOf({
+    id: PropTypes.string.isRequired,
+    label: PropTypes.string.isRequired,
+    percentage: PropTypes.number.isRequired,
+  }),
 };
