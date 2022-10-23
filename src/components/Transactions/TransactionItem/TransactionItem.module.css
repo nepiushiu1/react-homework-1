@@ -1,0 +1,8 @@
+.item {
+  padding: 5px 30px;
+  text-align: center;
+  border: 1px solid black;
+}
+.line:nth-child(2n + 1) {
+  background-color: #ebf0f4;
+}
