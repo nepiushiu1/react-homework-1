@@ -1,25 +1,15 @@
-export const Statics = () => {
-  return (
-    <section class="statistics">
-      <h2 class="title">Upload stats</h2>
+import css from './Statics.module.css';
+import { StaticsItem } from './StaticsItem/StaticsItem';
 
-      <ul class="stat-list">
-        <li class="item">
-          <span class="label">.docx</span>
-          <span class="percentage">4%</span>
-        </li>
-        <li class="item">
-          <span class="label">.mp3</span>
-          <span class="percentage">14%</span>
-        </li>
-        <li class="item">
-          <span class="label">.pdf</span>
-          <span class="percentage">41%</span>
-        </li>
-        <li class="item">
-          <span class="label">.mp4</span>
-          <span class="percentage">12%</span>
-        </li>
+export const Statics = ({ title, stats }) => {
+  return (
+    <section className={css.statistics}>
+      <h2 className={css.title}>{title}</h2>
+
+      <ul className={css.statList}>
+        {stats.map(({ id, label, percentage }) => (
+          <StaticsItem key={id} label={label} percentage={percentage} />
+        ))}
       </ul>
     </section>
   );

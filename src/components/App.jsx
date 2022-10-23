@@ -1,9 +1,11 @@
 import { Profile } from './Profile/Profile';
 import { Statics } from './Statics/Statics';
+import { FriendList } from './FriendList/FriendList';
 
 import user from 'user.json';
-// import data from 'data.json';
+import data from 'data.json';
 import css from './App.module.css';
+import friends from 'friends.json';
 
 export const App = () => {
   return (
@@ -15,7 +17,8 @@ export const App = () => {
         avatar={user.avatar}
         stats={user.stats}
       />
-      <Statics />
+      <Statics title="stats" stats={data} />
+      <FriendList friends={friends} />
     </div>
   );
 };
